@@ -34,7 +34,6 @@ public class PlayerInputContainer : MonoBehaviour
     {
         ProcessTouchInput();
         
-        
     }
 
     void ProcessTouchInput()
@@ -59,7 +58,6 @@ public class PlayerInputContainer : MonoBehaviour
                             selectedTowerObject = null;
                         }
                         
-                            
                     }
                 }
                 print(hit.collider.gameObject.name);
@@ -70,8 +68,6 @@ public class PlayerInputContainer : MonoBehaviour
             {
                 selectedTowerObject = null;
             }
-            
-
         }
         
     }

@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722984abccc14fe49bfa052d6a9c99fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  towerObject: {fileID: 868492650}
+  towerObject: {fileID: 2514550105576557345, guid: 1821b92a49f017341a9a46a9803fbf45, type: 3}
   playerInput: {fileID: 125422801}
 --- !u!1 &913762906
 GameObject:
@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722984abccc14fe49bfa052d6a9c99fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DebugTowerButton
-  towerObject: {fileID: 1244264731}
+  towerObject: {fileID: 2514550105576557345, guid: bd62c9aa997dd8a49a893eefaabbbac6, type: 3}
   playerInput: {fileID: 125422801}
 --- !u!1 &1296674627
 GameObject:
