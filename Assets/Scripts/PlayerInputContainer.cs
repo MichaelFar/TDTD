@@ -34,23 +34,22 @@ public class PlayerInputContainer : MonoBehaviour
     {
         ProcessTouchInput();
         
-        
     }
 
     void ProcessTouchInput()
     {
         foreach (var touch in Touch.activeTouches)
         {
-            RaycastHit hit;
+            
 
             Ray ray_vector = Camera.main.ScreenPointToRay(touch.screenPosition);
 
-            bool ray = Physics.Raycast(ray_vector, out hit, Mathf.Infinity);//Physics.Raycast(Camera.main.ScreenToWorldPoint(touch.screenPosition),Camera.main.transform.forward,out hit,1000.0f);//Camera.main.ScreenPointToRay(touch.screenPosition);
-            if (ray)
-            {
-                if (hit.collider.GetComponent<TowerSlot>())
+            RaycastHit[] ray_hits = Physics.RaycastAll(ray_vector, Mathf.Infinity);//Physics.Raycast(Camera.main.ScreenToWorldPoint(touch.screenPosition),Camera.main.transform.forward,out hit,1000.0f);//Camera.main.ScreenPointToRay(touch.screenPosition);
+            foreach (RaycastHit i in ray_hits)
+            { 
+                if (i.collider.GetComponent<TowerSlot>())
                 {
-                    TowerSlot this_tower_slot = hit.collider.GetComponent<TowerSlot>();
+                    TowerSlot this_tower_slot = i.collider.GetComponent<TowerSlot>();
                     if (touch.phase == TouchPhase.Ended)
                     {
                         if(selectedTowerObject != null)
@@ -59,19 +58,18 @@ public class PlayerInputContainer : MonoBehaviour
                             selectedTowerObject = null;
                         }
                         
-                            
                     }
                 }
-                print(hit.collider.gameObject.name);
-                Debug.Log($"{touch.touchId}: {hit.point},{touch.phase}");
-            }
-
-            if(touch.phase == TouchPhase.Ended)
-            {
-                selectedTowerObject = null;
+            //print(hit.collider.gameObject.name);
+                Debug.Log($"{touch.touchId}: {i.point},{touch.phase}");
             }
             
-
+            
+            if (touch.phase == TouchPhase.Ended && selectedTowerObject != null)
+            {
+                print("Setting selected tower object to null");
+                selectedTowerObject = null;
+            }
         }
         
     }
