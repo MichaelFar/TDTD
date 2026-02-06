@@ -33,21 +33,6 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
             
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        /*
-        bool is_enemy = other.GetComponent<BaseEnemy>();
-        print("Something entered");
-        if(is_enemy)
-        {
-            
-            BaseEnemy enemy_instance = other.GetComponent<BaseEnemy>();
-
-            focusedEnemy = enemy_instance;
-        }
-        */
-    }
-
     public void CheckForEnemiesInShape()
     {
         print("Checking for enemies");

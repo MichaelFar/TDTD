@@ -44,6 +44,7 @@ public class Tower : MonoBehaviour
     {
         if (towerConstantActionObject != null)
         {
+            print("Executing interval action");
             towerConstantActionObject.ExecuteAction(delta);
         }
     }

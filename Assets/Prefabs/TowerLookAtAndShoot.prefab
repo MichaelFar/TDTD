@@ -235,8 +235,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8117413450949560586}
   - component: {fileID: 4084823935334096016}
+  - component: {fileID: 8025416952500971449}
   - component: {fileID: 3516993667730447943}
-  - component: {fileID: 8961398659735141083}
   m_Layer: 0
   m_Name: TowerLookAtAndShoot
   m_TagString: Untagged
@@ -274,6 +274,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   actionInterval: 1
   head: {fileID: 2250532973731174204}
+--- !u!114 &8025416952500971449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209609366445499870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe044c9cb8eaf544faefc3933b413229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShootTowerAction
+  projectileToShoot: {fileID: 2243037976322125111, guid: c482e21e104a656409261992ecac36b4, type: 3}
+  objectToShootFrom: {fileID: 4957157464541044947}
 --- !u!114 &3516993667730447943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,25 +301,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerLookAtEnemyConstantAction
   objectToRotate: {fileID: 2250532973731174204}
+  sphereCastRadius: 5
   rotationSpeed: 5
---- !u!65 &8961398659735141083
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7209609366445499870}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8, y: 8, z: 8}
-  m_Center: {x: 0, y: 0.5, z: 0}
