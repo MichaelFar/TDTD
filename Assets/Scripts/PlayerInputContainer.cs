@@ -63,13 +63,13 @@ public class PlayerInputContainer : MonoBehaviour
             //print(hit.collider.gameObject.name);
                 Debug.Log($"{touch.touchId}: {i.point},{touch.phase}");
             }
-            
-            
+
             if (touch.phase == TouchPhase.Ended && selectedTowerObject != null)
             {
                 print("Setting selected tower object to null");
                 selectedTowerObject = null;
             }
+
         }
         
     }
