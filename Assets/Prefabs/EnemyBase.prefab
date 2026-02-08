@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1806129506270264492}
   - component: {fileID: 5252436547691589130}
   - component: {fileID: 2440549481807493487}
+  - component: {fileID: 7872177874253343439}
   m_Layer: 0
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -125,3 +126,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994713d2ca4808f4aa8b2fbd4d91332c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &7872177874253343439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107072500571646815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Splines::UnityEngine.Splines.SplineAnimate
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 29.46977
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0

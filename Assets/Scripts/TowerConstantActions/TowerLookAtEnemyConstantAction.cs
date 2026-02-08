@@ -36,13 +36,17 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
     public void CheckForEnemiesInShape()
     {
         print("Checking for enemies");
-        if(focusedEnemy == null)
-        {
-            
-            foreach( Collider i in Physics.OverlapSphere(transform.position, sphereCastRadius))
-            {
-                bool is_enemy = i.GetComponent<BaseEnemy>();
 
+        bool enemy_exists_in_range = false;
+        foreach( Collider i in Physics.OverlapSphere(transform.position, sphereCastRadius))
+        {
+            bool is_enemy = i.GetComponent<BaseEnemy>();
+            if (enemy_exists_in_range == false)
+            {
+                enemy_exists_in_range = is_enemy;
+            }
+            if (focusedEnemy == null)
+            {
                 if (is_enemy)
                 {
                     print("Enemy detected");
@@ -50,8 +54,13 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
                     focusedEnemy = enemy_instance;
                 }
             }
-            
         }
+        if(!enemy_exists_in_range)
+        {
+            focusedEnemy = null;
+        }
+            
+        
         
         
     }
