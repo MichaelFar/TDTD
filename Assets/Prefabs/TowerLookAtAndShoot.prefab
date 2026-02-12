@@ -291,6 +291,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   shouldExecuteEvent: 0
+  Executed_Action:
+    m_PersistentCalls:
+      m_Calls: []
   projectileToShoot: {fileID: 2243037976322125111, guid: c482e21e104a656409261992ecac36b4, type: 3}
   objectToShootFrom: {fileID: 4957157464541044947}
 --- !u!114 &3516993667730447943
@@ -321,6 +324,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   shouldExecuteEvent: 0
+  Executed_Action:
+    m_PersistentCalls:
+      m_Calls: []
   objectToRotate: {fileID: 2250532973731174204}
   sphereCastRadius: 10
   rotationSpeed: 5

@@ -25,9 +25,13 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         print("Projectile hit: " + other);
-        if(other.GetComponent<BaseEnemy>())
+        if(other.GetComponent<HealthHandler>())
         {
-            other.GetComponent<HealthHandler>().TakeDamage(damagePower);
+            if(other.GetComponent<BaseEnemy>())
+            {
+                other.GetComponent<HealthHandler>().TakeDamage(damagePower);
+            }
+                
             Destroy(gameObject);
         }
     }

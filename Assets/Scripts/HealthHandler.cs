@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class HealthHandler : MonoBehaviour
@@ -8,6 +9,8 @@ public class HealthHandler : MonoBehaviour
     public float startingHealth = 10.0f;
     public Image healthBarForeground;
     private float currentHealth = 0.0f;
+
+    public UnityEvent Health_Became_Zero;
 
     void Start()
     {
@@ -26,7 +29,7 @@ public class HealthHandler : MonoBehaviour
         healthBarForeground.fillAmount = currentHealth / startingHealth;
         if(healthBarForeground.fillAmount == 0.0f)
         {
-            Destroy(gameObject);
+            Health_Became_Zero.Invoke();
         }
     }
 }

@@ -23,7 +23,8 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
     
     public override void ExecuteAction(float delta)
     {
-        if(focusedEnemy != null)
+        Executed_Action.Invoke();
+        if (focusedEnemy != null)
         {
             Quaternion target_rotation = Quaternion.LookRotation(transform.position - focusedEnemy.transform.position);
 
@@ -66,7 +67,7 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
         {
             print("Setting should execute to false");
             focusedEnemy = null;
-            //shouldExecuteEvent = false;
+            shouldExecuteEvent = false;
             Now_Able_To_Execute.Invoke();
         }
             
