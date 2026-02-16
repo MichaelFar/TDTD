@@ -1802,6 +1802,13 @@ MonoBehaviour:
   currentcamera: {fileID: 1490117943}
   numEnemiesToSpawn: 10
   spawnInterval: 8
+  currentWave: 1
+  wavesArray:
+  - {fileID: 11400000, guid: 9340a664c8450fe46b0fc9aff0be6a9a, type: 2}
+  - {fileID: 11400000, guid: 319a10a96502b974389f8f4c2877eb6e, type: 2}
+  wavesEnded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1490117941
 GameObject:
   m_ObjectHideFlags: 0

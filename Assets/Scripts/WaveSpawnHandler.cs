@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Splines;
 
 public class WaveSpawnHandler : MonoBehaviour
@@ -22,9 +23,21 @@ public class WaveSpawnHandler : MonoBehaviour
 
     private float deltaTracker = 0.0f;
 
+    private int currentWaveIndex = 0;
+
+    public int currentWave = 1;
+
+    public Wave[] wavesArray;
+
+    private GameObject[] enemiesThisWave;
+
+    private int currentEnemyIndex = 0;
+
+    public UnityEvent wavesEnded;
+
     void Start()
     {
-        
+        PopulateWave();
     }
 
     // Update is called once per frame
@@ -39,13 +52,27 @@ public class WaveSpawnHandler : MonoBehaviour
         {
             deltaTracker = 0.0f;
             numInstancedEnemies = 0;
+            currentEnemyIndex = 0;
         }
 
         if (deltaTracker >= spawnInterval && numInstancedEnemies < numEnemiesToSpawn)
         {
             numInstancedEnemies += 1;
+
             SpawnEnemy();
+
+            currentEnemyIndex += 1;
             deltaTracker = 0.0f;
+
+            if(currentEnemyIndex == numEnemiesToSpawn)
+            {
+                StopWave();
+                currentWaveIndex += 1;
+                if (currentWaveIndex < wavesArray.Length)
+                {
+                    PopulateWave();
+                }
+            }
         }
         else if(numInstancedEnemies >= numEnemiesToSpawn)
         {
@@ -55,7 +82,7 @@ public class WaveSpawnHandler : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject enemy_instance = Instantiate(debugBaseEnemyToSpawn, transform.position, Quaternion.identity);
+        GameObject enemy_instance = Instantiate(enemiesThisWave[currentEnemyIndex], transform.position, Quaternion.identity);
         print("Enemy instance is " + enemy_instance);
         BaseEnemy base_enemy_instance = enemy_instance.GetComponent<BaseEnemy>();
         enemy_instance.GetComponent<SplineAnimate>().Container = splinePath;
@@ -63,6 +90,13 @@ public class WaveSpawnHandler : MonoBehaviour
         base_enemy_instance.billBoardUI.currentCamera = currentcamera;
         base_enemy_instance.Reached_End_Of_Path += core.TakeDamage;
         base_enemy_instance.StartMoving();
+    }
+    private void PopulateWave()
+    {
+        
+        enemiesThisWave = wavesArray[currentWaveIndex].enemiesInWave;
+        
+        numEnemiesToSpawn = enemiesThisWave.Length;
     }
 
     public void StartWave()
