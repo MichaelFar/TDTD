@@ -18,6 +18,7 @@ public class ShootTowerAction : BaseTowerAction
     }
     public override void ExecuteAction(float delta_time = 0.0f)
     {
+        Executed_Action.Invoke();
         print("Spawning projectile");
         // GameObject projectile_instance = Instantiate(projectileToShoot);
         Instantiate(projectileToShoot, objectToShootFrom.transform.position, transform.rotation);

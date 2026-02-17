@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class Tower : MonoBehaviour
 {
     public float actionInterval = 1.0f;
@@ -8,14 +8,23 @@ public class Tower : MonoBehaviour
 
     public GameObject head;
 
-    private BaseTowerAction towerActionObject;
+    public enum TOWERTYPE {GunTower, SupportTower};
+
+    public TOWERTYPE towerType; //This will be how certain upgrades/perks/items will know which towers will be affected
+
+    private BaseTowerAction towerIntervalActionObject;
 
     private BaseTowerConstantAction towerConstantActionObject;
+
+    public bool shouldContinueInterval = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        towerActionObject = GetComponent<BaseTowerAction>();
+        towerIntervalActionObject = GetComponent<BaseTowerAction>();
+
         towerConstantActionObject = GetComponent<BaseTowerConstantAction>();
+        //towerConstantActionObject.Now_Able_To_Execute.AddListener(CheckAndSetShouldContinueInterval);
+        //StartCoroutine(EndOfFramePopulation());
     }
 
     // Update is called once per frame
@@ -25,18 +34,18 @@ public class Tower : MonoBehaviour
 
         TowerConstantBehavior(Time.deltaTime);
 
-        if (timerFloat >= actionInterval)
+        if (timerFloat >= actionInterval && shouldContinueInterval)
         {
             timerFloat = 0.0f;
-            TowerAction();
+            TowerIntervalAction();
         }
     }
 
-    private void TowerAction()
+    private void TowerIntervalAction()
     {
-        if(towerActionObject != null)
+        if(towerIntervalActionObject != null)
         {
-            towerActionObject.ExecuteAction();
+            towerIntervalActionObject.ExecuteAction();
         }
     }
 
@@ -48,8 +57,17 @@ public class Tower : MonoBehaviour
             print("Executing interval action");
             towerConstantActionObject.ExecuteAction(delta);
 
-            
-
         }
     }
+    public void CheckAndSetShouldContinueIntervalFromConstantAction()
+    {
+        print("Setting should execute event to " + towerConstantActionObject.shouldExecuteEvent);
+        shouldContinueInterval = towerConstantActionObject.shouldExecuteEvent;
+    }
+    public void CheckAndSetShouldContinueIntervalFromIntervalAction()
+    {
+        print("Setting should execute event to " + towerIntervalActionObject.shouldExecuteEvent);
+        shouldContinueInterval = towerIntervalActionObject.shouldExecuteEvent;
+    }
+    
 }
