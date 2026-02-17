@@ -35,6 +35,8 @@ public class WaveSpawnHandler : MonoBehaviour
 
     public UnityEvent wavesEnded;
 
+    public EnemyTracker enemyTracker;
+
     void Start()
     {
         PopulateWave();
@@ -43,8 +45,8 @@ public class WaveSpawnHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(waveActive)
+
+        if (waveActive)
         {
             deltaTracker += Time.deltaTime;
         }
@@ -59,12 +61,12 @@ public class WaveSpawnHandler : MonoBehaviour
         {
             numInstancedEnemies += 1;
 
-            SpawnEnemy();
+            enemyTracker.SpawnEnemy(enemiesThisWave[currentEnemyIndex], splinePath, currentcamera, core);
 
             currentEnemyIndex += 1;
             deltaTracker = 0.0f;
 
-            if(currentEnemyIndex == numEnemiesToSpawn)
+            if (currentEnemyIndex == numEnemiesToSpawn)
             {
                 StopWave();
                 currentWaveIndex += 1;
@@ -74,37 +76,33 @@ public class WaveSpawnHandler : MonoBehaviour
                 }
             }
         }
-        else if(numInstancedEnemies >= numEnemiesToSpawn)
+        else if (numInstancedEnemies >= numEnemiesToSpawn)
         {
             StopWave();
         }
     }
 
-    private void SpawnEnemy()
-    {
-        GameObject enemy_instance = Instantiate(enemiesThisWave[currentEnemyIndex], transform.position, Quaternion.identity);
-        print("Enemy instance is " + enemy_instance);
-        BaseEnemy base_enemy_instance = enemy_instance.GetComponent<BaseEnemy>();
-        enemy_instance.GetComponent<SplineAnimate>().Container = splinePath;
-        //enemy_instance.GetComponent<BillBoardUI>().currentCamera = currentcamera;
-        base_enemy_instance.billBoardUI.currentCamera = currentcamera;
-        base_enemy_instance.Reached_End_Of_Path += core.TakeDamage;
-        base_enemy_instance.StartMoving();
-    }
+
     private void PopulateWave()
     {
-        
+
         enemiesThisWave = wavesArray[currentWaveIndex].enemiesInWave;
-        
+
         numEnemiesToSpawn = enemiesThisWave.Length;
     }
 
     public void StartWave()
     {
-        waveActive = true;
+        print("Starting wave");
+        if(!enemyTracker.CheckIfEnemiesExist())
+        {
+            waveActive = true;
+        }
+        
     }
     public void StopWave()
     {
         waveActive = false;
     }
+
 }

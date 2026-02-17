@@ -4,4 +4,5 @@ using UnityEngine;
 public class Wave : ScriptableObject
 {
     public GameObject[] enemiesInWave;
+    public float[] intervalForThisEnemy;
 }

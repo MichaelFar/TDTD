@@ -1761,6 +1761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1401473972}
+  - component: {fileID: 1401473974}
   - component: {fileID: 1401473973}
   m_Layer: 0
   m_Name: WaveSpawnHandler
@@ -1809,6 +1810,19 @@ MonoBehaviour:
   wavesEnded:
     m_PersistentCalls:
       m_Calls: []
+  enemyTracker: {fileID: 1401473974}
+--- !u!114 &1401473974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401473971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734b717ef56225e4ca685c46eb457354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyTracker
 --- !u!1 &1490117941
 GameObject:
   m_ObjectHideFlags: 0
