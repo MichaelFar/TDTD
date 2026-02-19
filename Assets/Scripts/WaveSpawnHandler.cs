@@ -75,7 +75,7 @@ public class WaveSpawnHandler : MonoBehaviour
             numInstancedEnemies += 1;
 
             enemyTracker.SpawnEnemy(enemiesThisWave[currentEnemyIndex], splinePath, currentcamera, core);
-
+            UpdateSpawnInterval();
             currentEnemyIndex += 1;
             deltaTracker = 0.0f;
 
@@ -102,7 +102,7 @@ public class WaveSpawnHandler : MonoBehaviour
 
         enemiesThisWave = wavesArray[currentWaveIndex].enemiesInWave;
 
-        spawnInterval = wavesArray[currentWaveIndex].intervalForThisEnemy.Length > currentEnemyIndex ? wavesArray[currentWaveIndex].intervalForThisEnemy[currentEnemyIndex] : wavesArray[currentWaveIndex].defaultSpawnInterval;
+        
 
         numEnemiesToSpawn = enemiesThisWave.Length;
     }
@@ -124,6 +124,10 @@ public class WaveSpawnHandler : MonoBehaviour
         }
 
 
+    }
+    private void UpdateSpawnInterval()
+    {
+        spawnInterval = wavesArray[currentWaveIndex].intervalForThisEnemy.Length - 1 > currentEnemyIndex ? wavesArray[currentWaveIndex].intervalForThisEnemy[currentEnemyIndex] : wavesArray[currentWaveIndex].defaultSpawnInterval;
     }
     public void StopWave()
     {
