@@ -133,6 +133,9 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   billBoardUI: {fileID: 2803966134549388394}
   damagePowerToCore: 1
+  potentialDropsArray:
+  - {fileID: 1422819872182568790, guid: ae7639d97ae1d3d4bbb48d09f1222cd7, type: 3}
+  chanceToDrop: 100
 --- !u!114 &7872177874253343439
 MonoBehaviour:
   m_ObjectHideFlags: 0
