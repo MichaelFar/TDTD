@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class MoneyPickup : MonoBehaviour
+public class CoreHandler : MonoBehaviour
 {
-    public float value = 10.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public HealthHandler healthHandler;
     void Start()
     {
         
@@ -13,5 +13,11 @@ public class MoneyPickup : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void TakeDamage(float incoming_damage)
+    {
+        print("Taking damage");
+        healthHandler.TakeDamage(incoming_damage);
     }
 }

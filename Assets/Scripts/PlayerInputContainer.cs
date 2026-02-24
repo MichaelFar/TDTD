@@ -8,13 +8,13 @@ using UnityEngine.InputSystem.EnhancedTouch;
 public class PlayerInputContainer : MonoBehaviour
 {
 
-    public GameObject testTowerPrefab;
-
     public Touchscreen touchscreen;
+
+    public PlayerMoneyManager playerMM;
 
     private GameObject selectedTowerObject;
 
-    private enum InputState {PLACEMENTSCREEN};//Handles instances where certain input contexts should be checked, IE we shouldn't place towers on the pause menu
+    public enum InputState {PLACEMENTSCREEN, DEMOLISHMODE};//Handles instances where certain input contexts should be checked, IE we shouldn't place towers on the pause menu
 
     private InputState currentInputState = InputState.PLACEMENTSCREEN;
 
@@ -41,7 +41,6 @@ public class PlayerInputContainer : MonoBehaviour
         foreach (var touch in Touch.activeTouches)
         {
             
-
             Ray ray_vector = Camera.main.ScreenPointToRay(touch.screenPosition);
 
             RaycastHit[] ray_hits = Physics.RaycastAll(ray_vector, Mathf.Infinity);//Physics.Raycast(Camera.main.ScreenToWorldPoint(touch.screenPosition),Camera.main.transform.forward,out hit,1000.0f);//Camera.main.ScreenPointToRay(touch.screenPosition);
@@ -52,15 +51,29 @@ public class PlayerInputContainer : MonoBehaviour
                     TowerSlot this_tower_slot = i.collider.GetComponent<TowerSlot>();
                     if (touch.phase == TouchPhase.Ended)
                     {
-                        if(selectedTowerObject != null)
+                        if (currentInputState == InputState.PLACEMENTSCREEN)
                         {
-                            this_tower_slot.InstanceNewTower(selectedTowerObject);
-                            selectedTowerObject = null;
+                            if (selectedTowerObject != null)
+                            {
+                                this_tower_slot.InstanceNewTower(selectedTowerObject);
+                                selectedTowerObject = null;
+                            }
                         }
-                        
+                        else if(currentInputState == InputState.DEMOLISHMODE)
+                        {
+                            this_tower_slot.DestroyTower();
+                        }
                     }
                 }
-            //print(hit.collider.gameObject.name);
+
+                else if(i.collider.GetComponent<MoneyPickup>())
+                {
+                    MoneyPickup this_money_pickup = i.collider.GetComponent<MoneyPickup>();
+                    playerMM.playerCurrentMoney += this_money_pickup.value;
+                    Destroy(this_money_pickup.gameObject);
+                }
+
+                //print(hit.collider.gameObject.name);
                 Debug.Log($"{touch.touchId}: {i.point},{touch.phase}");
             }
 
@@ -78,5 +91,21 @@ public class PlayerInputContainer : MonoBehaviour
     {
         print("Receiving tower " + new_tower_object);
         selectedTowerObject = new_tower_object;
+    }
+    public void SetInputMode(InputState new_input_state)
+    {
+        currentInputState = new_input_state;
+    }
+
+    public void ToggleDemolishMode()
+    {
+        if(currentInputState == InputState.PLACEMENTSCREEN)
+        {
+            currentInputState = InputState.DEMOLISHMODE;
+        }
+        else if (currentInputState == InputState.DEMOLISHMODE)
+        {
+            currentInputState = InputState.PLACEMENTSCREEN;
+        }
     }
 }
