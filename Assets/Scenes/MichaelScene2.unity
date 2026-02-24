@@ -1095,6 +1095,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetAspectRatio: 1.7777778
+--- !u!114 &1781449269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9039247566909455213, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+  m_PrefabInstance: {fileID: 2255028411315023729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74337101b7f79f4eb4671ce3956b07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!114 &2029940701 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6081394058811783396, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
@@ -1114,6 +1125,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 627910961379221282, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_text
+      value: You Win!
+      objectReference: {fileID: 0}
     - target: {fileID: 3638072005524904041, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: m_Name
       value: PrototypeUI
@@ -1126,6 +1141,14 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1043670411}
+    - target: {fileID: 4375459452069566434, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5926296760947721731, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6012269512629583558, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: playerInput
       value: 
@@ -1231,6 +1254,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
+      propertyPath: startingHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
+      propertyPath: Health_Became_Zero.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
+      propertyPath: Health_Became_Zero.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
+      propertyPath: Health_Became_Zero.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1781449269}
+    - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
+      propertyPath: Health_Became_Zero.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
+      propertyPath: Health_Became_Zero.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowFailScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
+      propertyPath: Health_Became_Zero.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
+      propertyPath: Health_Became_Zero.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6489242172013616636, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.91
@@ -1319,6 +1374,34 @@ PrefabInstance:
       propertyPath: currentcamera
       value: 
       objectReference: {fileID: 1490117943}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1781449269}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowFailScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4381150190135627175, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: m_Name
       value: WaveSpawnHandler
@@ -1436,9 +1519,9 @@ SceneRoots:
   - {fileID: 510364023}
   - {fileID: 1490117944}
   - {fileID: 912976974}
+  - {fileID: 8465221806086287442}
   - {fileID: 2255028411315023729}
   - {fileID: 1132633662}
-  - {fileID: 8465221806086287442}
   - {fileID: 1349628096}
   - {fileID: 1128242466}
   - {fileID: 889806208}

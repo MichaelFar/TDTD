@@ -7,7 +7,7 @@ public class TowerSlot : MonoBehaviour
 
     bool isOccupied = false;
 
-    GameObject currentTower;
+    private GameObject currentTower;
     void Start()
     {
         
@@ -33,5 +33,9 @@ public class TowerSlot : MonoBehaviour
     {
         Destroy(currentTower);
         isOccupied = false;
+    }
+    public Tower GetTower()
+    {
+        return currentTower.GetComponent<Tower>();
     }
 }

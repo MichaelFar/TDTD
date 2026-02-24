@@ -272,8 +272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fac841ce834b8444814c44e25bcc352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  actionInterval: 4
+  actionInterval: 2
   head: {fileID: 2250532973731174204}
+  towerValue: 25
+  refundRatio: 0.8
+  towerType: 0
   shouldContinueInterval: 0
 --- !u!114 &8025416952500971449
 MonoBehaviour:
