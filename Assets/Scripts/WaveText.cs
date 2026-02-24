@@ -7,11 +7,13 @@ public class WaveText : MonoBehaviour
 
     private int _current_wave; // field
 
-    public int currentWave
+    public int initialValue = 1;
+
+    public int currentValue
     {
         get { return _current_wave; }
         set { _current_wave = value;
-            textElement.text = "Wave " + _current_wave.ToString();
+            textElement.text = labelText + _current_wave.ToString();
         }
     }
     public string labelText;
@@ -20,7 +22,7 @@ public class WaveText : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SetCurrentWave(1);
+        SetCurrentWave(initialValue);
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class WaveText : MonoBehaviour
 
     public void SetCurrentWave(int new_value)
     {
-        currentWave = new_value;
+        currentValue = new_value;
     }
 
     public void IndicateFinalWave()

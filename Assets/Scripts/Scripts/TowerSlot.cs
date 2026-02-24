@@ -6,6 +6,8 @@ public class TowerSlot : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     bool isOccupied = false;
+
+    GameObject currentTower;
     void Start()
     {
         
@@ -22,9 +24,14 @@ public class TowerSlot : MonoBehaviour
         if(!isOccupied)
         {
             
-            Instantiate(new_tower_object, transform.position, Quaternion.identity);
+            currentTower = Instantiate(new_tower_object, transform.position, Quaternion.identity);
             isOccupied = true;
         }
             
+    }
+    public void DestroyTower()
+    {
+        Destroy(currentTower);
+        isOccupied = false;
     }
 }

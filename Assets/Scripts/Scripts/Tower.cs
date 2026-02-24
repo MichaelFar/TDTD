@@ -8,6 +8,7 @@ public class Tower : MonoBehaviour
 
     public GameObject head;
 
+    public float towerValue = 25.0f;
     public enum TOWERTYPE {GunTower, SupportTower};
 
     public TOWERTYPE towerType; //This will be how certain upgrades/perks/items will know which towers will be affected
