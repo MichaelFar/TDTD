@@ -27,4 +27,23 @@ public class PlayerMoneyManager : MonoBehaviour
     {
         
     }
+    public bool CheckIfCanPurchase(float price)
+    {
+        if(price <= playerCurrentMoney)
+        {
+            
+            return true;
+        }
+        return false;
+    }
+
+    public void Purchase(float price)
+    {
+        playerCurrentMoney -= price;
+    }
+
+    public void Refund(float amount_to_refund)
+    {
+        playerCurrentMoney += amount_to_refund;
+    }
 }

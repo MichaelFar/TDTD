@@ -20,9 +20,13 @@ public class WaveText : MonoBehaviour
 
     public TextMeshProUGUI textElement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
         SetCurrentWave(initialValue);
+    }
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
