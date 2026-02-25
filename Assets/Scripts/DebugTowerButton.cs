@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,10 +12,26 @@ public class DebugTowerButton : MonoBehaviour, IPointerDownHandler
     public GameObject towerObject;
 
     public PlayerInputContainer playerInput;
-    
 
+    private int _current_value;
+    public int currentValue
+    {
+        get { return _current_value; }
+        set
+        {
+            _current_value = value;
+            textLabel.text = labelText + _current_value.ToString();
+        }
+    }
+    public string labelText;
+
+    public TextMeshProUGUI textLabel;
+
+    public float valueOfTower;
     void Start()
     {
+        valueOfTower = towerObject.GetComponent<Tower>().towerValue;
+        currentValue = (int)valueOfTower;
         //GetComponent<Button>().MouseDown.AddListener(SendTowerToPlayerInput);
     }
 
@@ -32,7 +49,11 @@ public class DebugTowerButton : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         //is_Touched = false;
-        SendTowerToPlayerInput();
+        if(playerInput.playerMM.CheckIfCanPurchase(valueOfTower))
+        {
+            SendTowerToPlayerInput();
+        }
+        
     }
 
 }

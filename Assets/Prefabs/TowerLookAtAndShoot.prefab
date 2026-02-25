@@ -253,8 +253,8 @@ Transform:
   m_GameObject: {fileID: 7209609366445499870}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -2.9542, z: 1.1977}
+  m_LocalScale: {x: 6.908611, y: 6.908611, z: 6.908611}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1164259132089894741}
@@ -272,8 +272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fac841ce834b8444814c44e25bcc352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  actionInterval: 4
+  actionInterval: 1
   head: {fileID: 2250532973731174204}
+  towerValue: 25
+  refundRatio: 0.8
+  towerType: 0
   shouldContinueInterval: 0
 --- !u!114 &8025416952500971449
 MonoBehaviour:
@@ -328,5 +331,5 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   objectToRotate: {fileID: 2250532973731174204}
-  sphereCastRadius: 10
-  rotationSpeed: 5
+  sphereCastRadius: 30
+  rotationSpeed: 10

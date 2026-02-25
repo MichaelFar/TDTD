@@ -266,6 +266,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DebugTowerButton
   towerObject: {fileID: 7209609366445499870, guid: e689c08def7703e4694d27b69044b0ac, type: 3}
   playerInput: {fileID: 0}
+  labelText: 'Purchase Tower: '
+  textLabel: {fileID: 0}
+  valueOfTower: 0
 --- !u!1 &5215923856594734659
 GameObject:
   m_ObjectHideFlags: 0

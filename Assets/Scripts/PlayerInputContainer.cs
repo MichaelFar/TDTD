@@ -55,12 +55,14 @@ public class PlayerInputContainer : MonoBehaviour
                         {
                             if (selectedTowerObject != null)
                             {
+                                playerMM.Purchase(selectedTowerObject.GetComponent<Tower>().towerValue);
                                 this_tower_slot.InstanceNewTower(selectedTowerObject);
                                 selectedTowerObject = null;
                             }
                         }
                         else if(currentInputState == InputState.DEMOLISHMODE)
                         {
+                            playerMM.Refund(this_tower_slot.GetTower().towerValue * this_tower_slot.GetTower().refundRatio);
                             this_tower_slot.DestroyTower();
                         }
                     }
