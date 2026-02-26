@@ -14,4 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Wave
   enemiesInWave:
   - {fileID: 2107072500571646815, guid: be6cece1e1dd5ae4d98b06d23628ae52, type: 3}
-  intervalForThisEnemy: []
+  - {fileID: 2107072500571646815, guid: 52a917ae86df33e46b34c54c3506885d, type: 3}
+  - {fileID: 2107072500571646815, guid: 52a917ae86df33e46b34c54c3506885d, type: 3}
+  - {fileID: 2107072500571646815, guid: 52a917ae86df33e46b34c54c3506885d, type: 3}
+  - {fileID: 2107072500571646815, guid: be6cece1e1dd5ae4d98b06d23628ae52, type: 3}
+  intervalForThisEnemy:
+  - 0
+  - 2
+  defaultSpawnInterval: 4

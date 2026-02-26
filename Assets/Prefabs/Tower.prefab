@@ -28,9 +28,9 @@ Transform:
   m_GameObject: {fileID: 2250532973731174204}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.32253}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2959872041477008068}
   m_Father: {fileID: 8117413450949560586}
@@ -274,6 +274,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   actionInterval: 1
   head: {fileID: 2250532973731174204}
+  towerValue: 25
+  refundRatio: 0.8
+  towerType: 0
+  shouldContinueInterval: 0
 --- !u!114 &6492190235016612349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +290,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86508485236ba3241a9b4c373f83ea4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseTowerAction
+  Now_Able_To_Execute:
+    m_PersistentCalls:
+      m_Calls: []
+  shouldExecuteEvent: 0
+  Executed_Action:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1777812874504560442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,3 +309,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c8eb210c5856d4f967695aebe78251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseTowerConstantAction
+  Now_Able_To_Execute:
+    m_PersistentCalls:
+      m_Calls: []
+  shouldExecuteEvent: 0
+  Executed_Action:
+    m_PersistentCalls:
+      m_Calls: []
