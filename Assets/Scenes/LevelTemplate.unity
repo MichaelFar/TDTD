@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: c3c919c76d020474b88f87f5fda72140, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1964,6 +1964,7 @@ GameObject:
   - component: {fileID: 1296842332}
   - component: {fileID: 1296842331}
   - component: {fileID: 1296842330}
+  - component: {fileID: 1296842333}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2008,11 +2009,11 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 16
+    height: 9
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 34
   orthographic: 1
   orthographic size: 50
   m_Depth: -1
@@ -2039,12 +2040,25 @@ Transform:
   m_GameObject: {fileID: 1296842329}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 20.6, z: 0}
+  m_LocalPosition: {x: 0, y: 172, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1296842333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296842329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cedaaa7eae1934bbdc7354d6374985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  targetAspectRatio: 1.7777778
 --- !u!1 &1380172063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,7 +3066,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
       propertyPath: startingHealth
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3411174225687249553, guid: 74ed69d0fb984e2428d45981216c8e61, type: 3}
       propertyPath: Health_Became_Zero.m_PersistentCalls.m_Calls.Array.size
