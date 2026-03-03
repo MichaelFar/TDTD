@@ -6,6 +6,7 @@ public class UIHandler : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Canvas failScreenUI;
     public Canvas victoryScreenUI;
+    public Canvas pauseScreenUI;
     void Start()
     {
         
@@ -29,8 +30,18 @@ public class UIHandler : MonoBehaviour
         }
         
     }
+    public void TogglePauseScreen()
+    {
+        pauseScreenUI.enabled = !pauseScreenUI.enabled;
+        Time.timeScale = pauseScreenUI.enabled ? 0 : 1;
+    }
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
