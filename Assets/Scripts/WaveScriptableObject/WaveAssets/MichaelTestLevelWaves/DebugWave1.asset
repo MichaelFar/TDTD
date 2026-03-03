@@ -16,5 +16,13 @@ MonoBehaviour:
   - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
   - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
   - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
   intervalForThisEnemy:
   - 1
+  defaultSpawnInterval: 5
