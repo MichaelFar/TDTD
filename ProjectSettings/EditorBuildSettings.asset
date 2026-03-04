@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MichaelScene2.unity
     guid: 1ecea4ec651ef724897dbe2c9beb574a
   - enabled: 1
-    path: Assets/Scenes/LevelTemplate.unity
+    path: Assets/Scenes/_TutorialLevels/Lvl1.unity
     guid: a1d5c3038ec5a3b48b16f03d3e598532
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
