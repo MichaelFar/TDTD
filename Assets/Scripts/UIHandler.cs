@@ -37,7 +37,9 @@ public class UIHandler : MonoBehaviour
     }
     public void RestartLevel()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        print("Restarting level to " + SceneManager.GetActiveScene().name);
     }
 
     public void QuitGame()
