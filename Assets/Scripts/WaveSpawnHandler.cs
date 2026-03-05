@@ -112,6 +112,7 @@ public class WaveSpawnHandler : MonoBehaviour
         print("Starting wave");
         if(!enemyTracker.CheckIfEnemiesExist() && currentWaveIndex < wavesArray.Length && !waveActive)
         {
+            print("Starting next wave");
             waveText.SetCurrentWave(currentWave);
             currentWave += 1;
             
