@@ -35,6 +35,10 @@ public class WaveSpawnHandler : MonoBehaviour
 
     public UnityEvent wavesEnded;
 
+    public UnityEvent thisWaveEnded;
+
+    public UnityEvent thisWaveStarted;
+
     public EnemyTracker enemyTracker;
 
     public WaveText waveText;
@@ -92,6 +96,7 @@ public class WaveSpawnHandler : MonoBehaviour
         }
         else if (numInstancedEnemies >= numEnemiesToSpawn)
         {
+            thisWaveEnded.Invoke();
             StopWave();
         }
     }
@@ -109,13 +114,13 @@ public class WaveSpawnHandler : MonoBehaviour
 
     public void StartWave()
     {
-        print("Starting wave");
+        print("Attempting to start wave");
         if(!enemyTracker.CheckIfEnemiesExist() && currentWaveIndex < wavesArray.Length && !waveActive)
         {
             print("Starting next wave");
             waveText.SetCurrentWave(currentWave);
             currentWave += 1;
-            
+            thisWaveStarted.Invoke();
             waveActive = true;
         }
 
