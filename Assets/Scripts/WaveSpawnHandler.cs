@@ -65,7 +65,12 @@ public class WaveSpawnHandler : MonoBehaviour
             if(!enemyTracker.CheckIfEnemiesExist() && currentWaveIndex != 0 && !allWavesCompleted)
             {
                 waveText.IndicateWaveCompleted();
-                if(currentWaveIndex == wavesArray.Length)
+                if(!waveText.isActiveAndEnabled)
+                {
+                    thisWaveEnded.Invoke();
+                }
+                    
+                if (currentWaveIndex == wavesArray.Length)
                 {
                     allWavesCompleted = true;
                     //print("completed all waves");
@@ -96,7 +101,7 @@ public class WaveSpawnHandler : MonoBehaviour
         }
         else if (numInstancedEnemies >= numEnemiesToSpawn)
         {
-            thisWaveEnded.Invoke();
+            //thisWaveEnded.Invoke();
             StopWave();
         }
     }
