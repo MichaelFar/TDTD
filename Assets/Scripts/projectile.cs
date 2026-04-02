@@ -34,5 +34,10 @@ public class Projectile : MonoBehaviour
                 
             Destroy(gameObject);
         }
+        else if(other.tag == "DestroysProjectiles")
+        {
+            Destroy(gameObject);
+        }
     }
+    
 }
