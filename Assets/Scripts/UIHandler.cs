@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -14,9 +15,11 @@ public class UIHandler : MonoBehaviour
     float waveTextVisibleDeltaTracker = 0.0f;
     public float timeThatWaveTextIsVisible = 3.0f;
     bool newWaveStarted = false;
+    float waveButtonSize;
     void Start()
     {
-        
+        waveButtonSize = Mathf.Sqrt(2);
+        //startWaveButton.transform.localScale = waveButtonSize;
     }
 
     // Update is called once per frame
@@ -60,7 +63,8 @@ public class UIHandler : MonoBehaviour
 
     public void ToggleStartWaveButtonVisible()
     {
-        startWaveButton.SetActive(!startWaveButton.activeSelf);
+        //startWaveButton.SetActive(!startWaveButton.activeSelf);
+        startWaveButton.transform.DOScale(0.01f, 0.3f);
     }
 
     public void SetNewWaveStartedBoolToTrue()
@@ -70,7 +74,8 @@ public class UIHandler : MonoBehaviour
 
     public void ShowWaveText()
     {
-        waveText.SetActive(true);
+        startWaveButton.transform.DOScale(waveButtonSize, 0.3f);
+        //waveText.SetActive(true);
     }
 
     public void GoToMainMenu()

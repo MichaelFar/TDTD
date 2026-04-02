@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -63,6 +64,7 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
                 }
             }
         }
+        //if(Physics.OverlapSphere(transform.position, sphereCastRadius).Contains(focusedEnemy))
         if(!enemy_exists_in_range)
         {
             print("Setting should execute to false");
