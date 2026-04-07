@@ -2187,7 +2187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveStarted.m_PersistentCalls.m_Calls.Array.size
@@ -2210,11 +2210,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1781449269}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1781449269}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1781449269}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
@@ -2242,12 +2250,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleStartWaveButtonVisible
+      value: ShowWaveText
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ShowWaveText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveStarted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2270,6 +2286,10 @@ PrefabInstance:
       value: UIHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UIHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveStarted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UIHandler, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -2283,6 +2303,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
@@ -3638,10 +3662,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 111944021}
+    - target: {fileID: 4000370571233784903, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_Name
+      value: button
+      objectReference: {fileID: 0}
     - target: {fileID: 4063387779514459617, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 2100293893}
+    - target: {fileID: 4082764647560599418, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4092076251242452234, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: playerInput
       value: 
@@ -3677,6 +3709,10 @@ PrefabInstance:
     - target: {fileID: 4397189055144531275, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112830491484136515, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 5301866674437611081, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: m_AnchorMax.x

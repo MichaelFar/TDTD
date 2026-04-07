@@ -24,6 +24,7 @@ public class UIHandler : MonoBehaviour
     public float timeThatWaveTextIsVisible = 3.0f;
     bool newWaveStarted = false;
     float waveButtonSize;
+    
     void Start()
     {
         waveButtonSize = Mathf.Sqrt(2);
@@ -41,7 +42,9 @@ public class UIHandler : MonoBehaviour
             waveTextVisibleDeltaTracker += Time.deltaTime;
             if(waveTextVisibleDeltaTracker >= timeThatWaveTextIsVisible)
             {
-                waveText.SetActive(false);
+                //print("New wave started");
+               // waveText.SetActive(false);
+                HideWaveText();
                 newWaveStarted = false;
             }
         }
@@ -75,17 +78,22 @@ public class UIHandler : MonoBehaviour
     public void ToggleStartWaveButtonVisible()
     {
         //startWaveButton.SetActive(!startWaveButton.activeSelf);
-        startWaveButton.transform.DOScale(0.01f, 0.3f);
+        startWaveButton.transform.DOScale(0.0f, 0.3f);
     }
 
     public void SetNewWaveStartedBoolToTrue()
     {
         newWaveStarted = true;
     }
-
+    public void HideWaveText()
+    {
+       // waveText.SetActive(false);
+        waveText.transform.DOScale(0.0f, 0.3f);
+    }
     public void ShowWaveText()
     {
         startWaveButton.transform.DOScale(waveButtonSize, 0.3f);
+        waveText.transform.DOScale(waveButtonSize, 0.3f);
         //waveText.SetActive(true);
     }
 
