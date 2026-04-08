@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2969106566344233001}
   - component: {fileID: 431348648719491438}
-  - component: {fileID: 3570252045663979622}
   - component: {fileID: 907192236972562634}
+  - component: {fileID: 3208898084674083384}
   m_Layer: 0
   m_Name: GunProjectile
   m_TagString: Untagged
@@ -56,23 +56,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3570252045663979622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2243037976322125111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b149aff293e32fa45a2fd28ec675856d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  speed: 2400
-  damagePower: 4
-  rb: {fileID: 907192236972562634}
-  target: {fileID: 0}
-  timeToHome: 0.2
 --- !u!54 &907192236972562634
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -100,6 +83,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3208898084674083384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243037976322125111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b149aff293e32fa45a2fd28ec675856d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  speed: 2400
+  damagePower: 4
+  rb: {fileID: 907192236972562634}
+  target: {fileID: 0}
+  timeToHome: 0.2
+  pierceCount: 0
 --- !u!1 &9073456172938534102
 GameObject:
   m_ObjectHideFlags: 0

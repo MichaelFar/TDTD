@@ -1,3 +1,4 @@
+//using System;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -17,6 +18,12 @@ public class Projectile : MonoBehaviour
     Vector3 direction_to_travel;
     private float deltaCounter = 0.0f;
 
+    //How many enemies can this pierce before getting destroyed
+    public int pierceCount = 0;
+
+    private float lifetime = 20.0f;
+
+    public int bounceCount = 0;
     void Start()
     {
         print("Instancing projectile");
@@ -26,7 +33,11 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        
+        deltaCounter += Time.deltaTime;
+        if(deltaCounter >= lifetime)
+        {
+            Destroy(gameObject);
+        }
     }
     void FixedUpdate()
     {
@@ -34,7 +45,7 @@ public class Projectile : MonoBehaviour
         
         if(target)
         {
-            deltaCounter += Time.deltaTime;
+            
             if (deltaCounter <= timeToHome)
             {
                 direction_to_travel = target.transform.position - transform.position;
@@ -57,9 +68,29 @@ public class Projectile : MonoBehaviour
             if(other.GetComponent<BaseEnemy>())
             {
                 other.GetComponent<HealthHandler>().TakeDamage(damagePower);
+                if (pierceCount <= 0 && bounceCount <= 0)
+                {
+                    
+                    Destroy(gameObject);
+                }
+                if(pierceCount > 0)
+                {
+                    print("Piercing enemy");
+                    pierceCount -= 1;
+                }
+                if(bounceCount > 0)
+                {
+                    print("Bouncing on enemy");
+                    bounceCount -= 1;
+                    float random_rotation_degree_left = Random.Range(-70.0f, -35.0f);
+                    float random_rotation_degree_right = Random.Range(35.0f, 70.0f);
+
+                    float random_rotation_degree = Random.Range(0, 2) == 0 ? random_rotation_degree_left : random_rotation_degree_right;
+                    transform.rotation = transform.rotation * Quaternion.Euler(Vector3.up * random_rotation_degree);
+                }
             }
+            
                 
-            Destroy(gameObject);
         }
         else if(other.tag == "DestroysProjectiles")
         {
@@ -67,4 +98,5 @@ public class Projectile : MonoBehaviour
         }
     }
     
+
 }
