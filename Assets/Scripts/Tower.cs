@@ -62,14 +62,16 @@ public class Tower : MonoBehaviour
 
         }
     }
+    //Constant action will typically determine if the interval action should keep occuring
     public void CheckAndSetShouldContinueIntervalFromConstantAction()
     {
-        print("Setting should execute event to " + towerConstantActionObject.shouldExecuteEvent);
+        print("Setting should execute event from constant action to " + towerConstantActionObject.shouldExecuteEvent);
         shouldContinueInterval = towerConstantActionObject.shouldExecuteEvent;
     }
+    //There are potentially reasons that the interval action determines if it should be fired, for instance if ammo were to ever be a mechanic
     public void CheckAndSetShouldContinueIntervalFromIntervalAction()
     {
-        print("Setting should execute event to " + towerIntervalActionObject.shouldExecuteEvent);
+        print("Setting should execute event from interval action to " + towerIntervalActionObject.shouldExecuteEvent);
         shouldContinueInterval = towerIntervalActionObject.shouldExecuteEvent;
     }
     

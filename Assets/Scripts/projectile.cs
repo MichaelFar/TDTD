@@ -10,10 +10,12 @@ public class Projectile : MonoBehaviour
 
     public Rigidbody rb;
 
-
+    public GameObject target;
+    //public GameObject rotationContainer;
     void Start()
     {
         print("Instancing projectile");
+        //transform.rotation = rotationContainer.transform.rotation;
     }
 
     // Update is called once per frame
