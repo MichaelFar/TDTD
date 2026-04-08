@@ -15,7 +15,7 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
 
     public bool shouldSetTarget = false;
 
-    public GameObject target;
+    //public GameObject target;
 
     void Start()
     {
@@ -67,7 +67,10 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
                     print("Enemy detected");
                     enemy_instance = i.GetComponent<BaseEnemy>();
                     focusedEnemy = enemy_instance;
-                    
+                    if(shouldSetTarget)
+                    {
+                        target = focusedEnemy.gameObject;
+                    }
                 }
             }
             
@@ -79,6 +82,7 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
             {
                 print("Setting should execute to false");
                 focusedEnemy = null;
+                target = null;
                 shouldExecuteEvent = false;
                 Now_Able_To_Execute.Invoke();
             }
@@ -86,6 +90,7 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
         else
         {
             print("Setting should execute to false");
+            target = null;
             shouldExecuteEvent = false;
             Now_Able_To_Execute.Invoke();
         }

@@ -3618,6 +3618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrototypeUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3773359725471975770, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_Name
+      value: TowerButtonDraggableSteamPunk
+      objectReference: {fileID: 0}
     - target: {fileID: 3805952598778714188, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: playerInput
       value: 
@@ -3630,10 +3634,22 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 2100293893}
+    - target: {fileID: 4063387779514459617, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: towerObject
+      value: 
+      objectReference: {fileID: 7209609366445499870, guid: 7b2fb44511ba10d448cf1c8e43a646fd, type: 3}
+    - target: {fileID: 7225537918204208910, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_Name
+      value: TowerButtonDraggablePresent
+      objectReference: {fileID: 0}
     - target: {fileID: 7529987179640507317, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 2100293893}
+    - target: {fileID: 7529987179640507317, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: towerObject
+      value: 
+      objectReference: {fileID: 7209609366445499870, guid: b8a5b9adf2ee2c34c92e5fae962d7262, type: 3}
     - target: {fileID: 8094691217159242842, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: m_Pivot.x
       value: 0

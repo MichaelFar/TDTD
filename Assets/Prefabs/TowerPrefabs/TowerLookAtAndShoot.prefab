@@ -299,6 +299,7 @@ MonoBehaviour:
       m_Calls: []
   projectileToShoot: {fileID: 2243037976322125111, guid: c482e21e104a656409261992ecac36b4, type: 3}
   objectToShootFrom: {fileID: 4957157464541044947}
+  target: {fileID: 0}
 --- !u!114 &3516993667730447943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +331,8 @@ MonoBehaviour:
   Executed_Action:
     m_PersistentCalls:
       m_Calls: []
+  target: {fileID: 0}
   objectToRotate: {fileID: 2250532973731174204}
   sphereCastRadius: 30
   rotationSpeed: 10
+  shouldSetTarget: 1

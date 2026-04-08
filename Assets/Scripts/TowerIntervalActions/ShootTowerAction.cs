@@ -6,6 +6,7 @@ public class ShootTowerAction : BaseTowerAction
 
     public GameObject projectileToShoot;
     public GameObject objectToShootFrom;
+    //public GameObject target;
     void Start()
     {
         
@@ -21,6 +22,7 @@ public class ShootTowerAction : BaseTowerAction
         Executed_Action.Invoke();
         print("Spawning projectile");
         // GameObject projectile_instance = Instantiate(projectileToShoot);
-        Instantiate(projectileToShoot, objectToShootFrom.transform.position, transform.rotation);
+        GameObject projectile_instance = Instantiate(projectileToShoot, objectToShootFrom.transform.position, transform.rotation);
+        projectile_instance.GetComponent<Projectile>().target = target;
     }
 }

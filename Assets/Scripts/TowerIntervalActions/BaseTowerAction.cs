@@ -8,6 +8,7 @@ public class BaseTowerAction : MonoBehaviour
     public UnityEvent Now_Able_To_Execute;
     public bool shouldExecuteEvent = false;
     public UnityEvent Executed_Action;
+    [HideInInspector] public GameObject target;
     void Start()
     {
         //Now_Able_To_Execute = new UnityEvent();
