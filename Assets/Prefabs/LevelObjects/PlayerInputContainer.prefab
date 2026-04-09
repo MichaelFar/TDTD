@@ -59,4 +59,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   moneyLabel: {fileID: 0}
-  startingMoney: 100
+  startingMoney: 50

@@ -53,7 +53,7 @@ public class PlayerInputContainer : MonoBehaviour
                     {
                         if (currentInputState == InputState.PLACEMENTSCREEN)
                         {
-                            if (selectedTowerObject != null)
+                            if (selectedTowerObject != null && !this_tower_slot.isOccupied)
                             {
                                 playerMM.Purchase(selectedTowerObject.GetComponent<Tower>().towerValue);
                                 this_tower_slot.InstanceNewTower(selectedTowerObject);

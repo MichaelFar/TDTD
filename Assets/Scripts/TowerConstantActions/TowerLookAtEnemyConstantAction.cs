@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -10,7 +11,11 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
 
     public float sphereCastRadius = 5.0f;
 
-    public float rotationSpeed = 5.0f; 
+    public float rotationSpeed = 5.0f;
+
+    public bool shouldSetTarget = false;
+
+    //public GameObject target;
 
     void Start()
     {
@@ -42,15 +47,17 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
     public void CheckForEnemiesInShape()
     {
         print("Checking for enemies");
-
-        bool enemy_exists_in_range = false;
-        foreach( Collider i in Physics.OverlapSphere(transform.position, sphereCastRadius))
+        
+        //focusedEnemyPresent = false;
+        
+        Collider[] collider_array = Physics.OverlapSphere(transform.position, sphereCastRadius);
+        
+        foreach (Collider i in collider_array)
         {
+            
             bool is_enemy = i.GetComponent<BaseEnemy>();
-            if (enemy_exists_in_range == false)
-            {
-                enemy_exists_in_range = is_enemy;
-            }
+            BaseEnemy enemy_instance;
+            
             if (focusedEnemy == null)
             {
                 if (is_enemy)
@@ -58,21 +65,35 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
                     shouldExecuteEvent = true;
                     Now_Able_To_Execute.Invoke();
                     print("Enemy detected");
-                    BaseEnemy enemy_instance = i.GetComponent<BaseEnemy>();
+                    enemy_instance = i.GetComponent<BaseEnemy>();
                     focusedEnemy = enemy_instance;
+                    if(shouldSetTarget)
+                    {
+                        target = focusedEnemy.gameObject;
+                    }
                 }
             }
+            
         }
-        if(!enemy_exists_in_range)
+        //Check if the focused enemy is currently within range
+        if(focusedEnemy)
+        {
+            if(Vector3.Distance(focusedEnemy.transform.position, transform.position) > sphereCastRadius)
+            {
+                print("Setting should execute to false");
+                focusedEnemy = null;
+                target = null;
+                shouldExecuteEvent = false;
+                Now_Able_To_Execute.Invoke();
+            }
+        }
+        else
         {
             print("Setting should execute to false");
-            focusedEnemy = null;
+            target = null;
             shouldExecuteEvent = false;
             Now_Able_To_Execute.Invoke();
         }
-            
-        
-        
-        
+
     }
 }

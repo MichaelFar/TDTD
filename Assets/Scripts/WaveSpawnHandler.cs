@@ -35,6 +35,10 @@ public class WaveSpawnHandler : MonoBehaviour
 
     public UnityEvent wavesEnded;
 
+    public UnityEvent thisWaveEnded;
+
+    public UnityEvent thisWaveStarted;
+
     public EnemyTracker enemyTracker;
 
     public WaveText waveText;
@@ -61,7 +65,12 @@ public class WaveSpawnHandler : MonoBehaviour
             if(!enemyTracker.CheckIfEnemiesExist() && currentWaveIndex != 0 && !allWavesCompleted)
             {
                 waveText.IndicateWaveCompleted();
-                if(currentWaveIndex == wavesArray.Length)
+                if(!waveText.isActiveAndEnabled)
+                {
+                    thisWaveEnded.Invoke();
+                }
+                    
+                if (currentWaveIndex == wavesArray.Length)
                 {
                     allWavesCompleted = true;
                     //print("completed all waves");
@@ -73,8 +82,19 @@ public class WaveSpawnHandler : MonoBehaviour
         if (deltaTracker >= spawnInterval && numInstancedEnemies < numEnemiesToSpawn)
         {
             numInstancedEnemies += 1;
-
-            enemyTracker.SpawnEnemy(enemiesThisWave[currentEnemyIndex], splinePath, currentcamera, core);
+            if (enemiesThisWave[currentEnemyIndex].GetComponent<RandomEnemy>())
+            {
+                
+                GameObject enemy_instance = Instantiate(enemiesThisWave[currentEnemyIndex], transform.position, Quaternion.identity);
+                RandomEnemy random_enemy = enemy_instance.GetComponent<RandomEnemy>();
+                //print("Chosen random enemy is " + random_enemy.chosenRandomEnemy);
+                enemyTracker.SpawnEnemy(random_enemy.ChooseRandomEnemyAndDestroySelf(), splinePath, currentcamera, core);
+            }
+            else
+            {
+                enemyTracker.SpawnEnemy(enemiesThisWave[currentEnemyIndex], splinePath, currentcamera, core);
+            }
+                
             UpdateSpawnInterval();
             currentEnemyIndex += 1;
             deltaTracker = 0.0f;
@@ -92,6 +112,7 @@ public class WaveSpawnHandler : MonoBehaviour
         }
         else if (numInstancedEnemies >= numEnemiesToSpawn)
         {
+            //thisWaveEnded.Invoke();
             StopWave();
         }
     }
@@ -109,12 +130,13 @@ public class WaveSpawnHandler : MonoBehaviour
 
     public void StartWave()
     {
-        print("Starting wave");
+        print("Attempting to start wave");
         if(!enemyTracker.CheckIfEnemiesExist() && currentWaveIndex < wavesArray.Length && !waveActive)
         {
+            print("Starting next wave");
             waveText.SetCurrentWave(currentWave);
             currentWave += 1;
-            
+            thisWaveStarted.Invoke();
             waveActive = true;
         }
 
@@ -127,6 +149,7 @@ public class WaveSpawnHandler : MonoBehaviour
     }
     private void UpdateSpawnInterval()
     {
+        //Check if there is an interval set for the current enemy, if not, use default spawn interval set in the wave object
         spawnInterval = wavesArray[currentWaveIndex].intervalForThisEnemy.Length - 1 > currentEnemyIndex ? wavesArray[currentWaveIndex].intervalForThisEnemy[currentEnemyIndex] : wavesArray[currentWaveIndex].defaultSpawnInterval;
     }
     public void StopWave()
