@@ -160,6 +160,7 @@ MonoBehaviour:
   target: {fileID: 0}
   timeToHome: 0.2
   pierceCount: 0
+  bounceCount: 0
 --- !u!1 &9073456172938534102
 GameObject:
   m_ObjectHideFlags: 0
