@@ -2182,6 +2182,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0024d823849573a49a55f339e50c0186, type: 2}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: 'wavesArray.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 91f3aafe72ef67d43a2022ba6d6edaa6, type: 2}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
