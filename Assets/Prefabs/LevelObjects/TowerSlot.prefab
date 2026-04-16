@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   isOccupied: 0
+  demolishObstaclePrefab: {fileID: 647743652657518784, guid: eea06b77f530f244d83e32d6d849e1ec, type: 3}
+  demolishObstacleInstance: {fileID: 0}
 --- !u!65 &2958482697614359961
 BoxCollider:
   m_ObjectHideFlags: 0

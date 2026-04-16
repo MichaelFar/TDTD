@@ -44,11 +44,44 @@ public class PlayerInputContainer : MonoBehaviour
             Ray ray_vector = Camera.main.ScreenPointToRay(touch.screenPosition);
 
             RaycastHit[] ray_hits = Physics.RaycastAll(ray_vector, Mathf.Infinity);//Physics.Raycast(Camera.main.ScreenToWorldPoint(touch.screenPosition),Camera.main.transform.forward,out hit,1000.0f);//Camera.main.ScreenPointToRay(touch.screenPosition);
+
+            bool demolish_obstacle_present = false;
+            DemolishObject thisDemolishObject = new DemolishObject();
             foreach (RaycastHit i in ray_hits)
-            { 
+            {
+                if (i.collider.GetComponent<DemolishObject>())
+                {
+                    demolish_obstacle_present = true;
+                    thisDemolishObject = i.collider.GetComponent<DemolishObject>();
+                    break;
+                }
+            }
+
+            foreach (RaycastHit i in ray_hits)
+            {
+                
                 if (i.collider.GetComponent<TowerSlot>())
                 {
+                    print("Targeted tower slot");
                     TowerSlot this_tower_slot = i.collider.GetComponent<TowerSlot>();
+                    
+                    if (touch.phase == TouchPhase.Ended)
+                    {
+                        if (currentInputState == InputState.DEMOLISHMODE)
+                        {
+                            if (demolish_obstacle_present)
+                            {
+                                if (thisDemolishObject != null)
+                                {
+                                    if (playerMM.CheckIfCanPurchase(thisDemolishObject.priceToDemolish))
+                                    {
+                                        playerMM.Purchase(thisDemolishObject.priceToDemolish);
+                                        this_tower_slot.DestroyDemolishObstacle();
+                                    }
+                                }
+                            }
+                        }
+                    }
                     if (touch.phase == TouchPhase.Ended)
                     {
                         if (currentInputState == InputState.PLACEMENTSCREEN)
@@ -60,20 +93,23 @@ public class PlayerInputContainer : MonoBehaviour
                                 selectedTowerObject = null;
                             }
                         }
-                        else if(currentInputState == InputState.DEMOLISHMODE)
+                        else if (currentInputState == InputState.DEMOLISHMODE)
                         {
                             playerMM.Refund(this_tower_slot.GetTower().towerValue * this_tower_slot.GetTower().refundRatio);
                             this_tower_slot.DestroyTower();
                         }
                     }
+                        
                 }
 
-                else if(i.collider.GetComponent<MoneyPickup>())
+                if(i.collider.GetComponent<MoneyPickup>())
                 {
                     MoneyPickup this_money_pickup = i.collider.GetComponent<MoneyPickup>();
                     playerMM.playerCurrentMoney += this_money_pickup.value;
                     Destroy(this_money_pickup.gameObject);
                 }
+
+                
 
                 //print(hit.collider.gameObject.name);
                 Debug.Log($"{touch.touchId}: {i.point},{touch.phase}");
