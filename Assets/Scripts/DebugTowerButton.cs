@@ -28,11 +28,14 @@ public class DebugTowerButton : MonoBehaviour, IPointerDownHandler
     public TextMeshProUGUI textLabel;
 
     public float valueOfTower;
+
+    public Image buttonImage;
     void Start()
     {
         valueOfTower = towerObject.GetComponent<Tower>().towerValue;
         currentValue = (int)valueOfTower;
         //GetComponent<Button>().MouseDown.AddListener(SendTowerToPlayerInput);
+
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class DebugTowerButton : MonoBehaviour, IPointerDownHandler
     public void SendTowerToPlayerInput()
     {
         playerInput.SetCurrentTowerObject(towerObject);
+        playerInput.playerCursor.GetComponent<VisualCursor>().ShowAndSetTexture(buttonImage);
     }
 
     public void OnPointerDown(PointerEventData eventData)

@@ -269,6 +269,7 @@ MonoBehaviour:
   labelText: 'Purchase Tower: '
   textLabel: {fileID: 0}
   valueOfTower: 0
+  buttonImage: {fileID: 5707650030491338070}
 --- !u!1 &5215923856594734659
 GameObject:
   m_ObjectHideFlags: 0

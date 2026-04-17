@@ -12,6 +12,8 @@ public class PlayerInputContainer : MonoBehaviour
 
     public PlayerMoneyManager playerMM;
 
+    public GameObject playerCursor;
+
     private GameObject selectedTowerObject;
 
     public enum InputState {PLACEMENTSCREEN, DEMOLISHMODE};//Handles instances where certain input contexts should be checked, IE we shouldn't place towers on the pause menu
@@ -113,6 +115,16 @@ public class PlayerInputContainer : MonoBehaviour
 
                 //print(hit.collider.gameObject.name);
                 Debug.Log($"{touch.touchId}: {i.point},{touch.phase}");
+                if(playerCursor)
+                {
+                    float y_mod = 5.0f;
+                    playerCursor.transform.position = i.point;
+                    playerCursor.transform.position += Vector3.up * y_mod;
+                }
+                if(touch.phase == TouchPhase.Ended)
+                {
+                   playerCursor.GetComponent<VisualCursor>().HideTexture();
+                }
             }
 
             if (touch.phase == TouchPhase.Ended && selectedTowerObject != null)
