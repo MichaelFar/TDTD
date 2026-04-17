@@ -32,4 +32,9 @@ public class HealthHandler : MonoBehaviour
             Health_Became_Zero.Invoke();
         }
     }
+    public void HealForIncoming(float incoming_health)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + incoming_health, 0.0f, startingHealth);
+        healthBarForeground.fillAmount = currentHealth / startingHealth;
+    }
 }

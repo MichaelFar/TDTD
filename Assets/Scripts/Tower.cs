@@ -39,7 +39,8 @@ public class Tower : MonoBehaviour
             
         }  // set method
     }
-
+    public float freezeDuration = 2.0f;
+    private float freezeTimeTracker = 0.0f;
     public bool shouldInitiallyFreezeActions = false;
     void Start()
     {
@@ -58,6 +59,7 @@ public class Tower : MonoBehaviour
     {
         if (!freezeAllActions)
         {
+            freezeTimeTracker = 0.0f;
             timerFloat += Time.deltaTime;
 
             TowerConstantBehavior(Time.deltaTime);
@@ -68,8 +70,19 @@ public class Tower : MonoBehaviour
                 TowerIntervalAction();
             }
         }
+        else
+        {
+            freezeTimeTracker += Time.deltaTime;
+            if(freezeTimeTracker >= freezeDuration)
+            {
+                freezeAllActions = false;
+            }
+        }
     }
-
+    public void SetFreezeDuration(float new_duration)
+    {
+        freezeDuration = new_duration;
+    }
     private void TowerIntervalAction()
     {
         if(towerIntervalActionObject != null)
