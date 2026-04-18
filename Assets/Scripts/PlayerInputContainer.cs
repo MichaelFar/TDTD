@@ -16,6 +16,7 @@ public class PlayerInputContainer : MonoBehaviour
 
     private GameObject selectedTowerObject;
 
+    public float cursorYModifier = 5.0f;
     public enum InputState {PLACEMENTSCREEN, DEMOLISHMODE};//Handles instances where certain input contexts should be checked, IE we shouldn't place towers on the pause menu
 
     private InputState currentInputState = InputState.PLACEMENTSCREEN;
@@ -117,7 +118,7 @@ public class PlayerInputContainer : MonoBehaviour
                 Debug.Log($"{touch.touchId}: {i.point},{touch.phase}");
                 if(playerCursor)
                 {
-                    float y_mod = 5.0f;
+                    float y_mod = cursorYModifier;
                     playerCursor.transform.position = i.point;
                     playerCursor.transform.position += Vector3.up * y_mod;
                 }
