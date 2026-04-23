@@ -10,19 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 503a3333d8975b94d945b400e07597c8, type: 3}
-  m_Name: DebugRandomWave
+  m_Name: wave_1_lvl_2
   m_EditorClassIdentifier: Assembly-CSharp::Wave
   enemiesInWave:
   - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
   - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: 9eb3c3518298d2844b781a830a67870e, type: 3}
   - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
-  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
-  - {fileID: 7380366580306701986, guid: a13e7c5b99e41584b95cb8e6d40c746a, type: 3}
-  - {fileID: 7380366580306701986, guid: a13e7c5b99e41584b95cb8e6d40c746a, type: 3}
-  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
-  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
-  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
-  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
-  intervalForThisEnemy:
-  - 1
-  defaultSpawnInterval: 5
+  intervalForThisEnemy: []
+  defaultSpawnInterval: 1

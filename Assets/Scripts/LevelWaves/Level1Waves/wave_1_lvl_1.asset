@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 503a3333d8975b94d945b400e07597c8, type: 3}
-  m_Name: DebugRandomWave
+  m_Name: wave_1_lvl_1
   m_EditorClassIdentifier: Assembly-CSharp::Wave
   enemiesInWave:
   - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
