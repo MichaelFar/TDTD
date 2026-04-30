@@ -95,12 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b149aff293e32fa45a2fd28ec675856d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 2400
+  speed: 3500
   damagePower: 4
   rb: {fileID: 907192236972562634}
   target: {fileID: 0}
   timeToHome: 0.2
   pierceCount: 0
+  bounceCount: 0
 --- !u!1 &9073456172938534102
 GameObject:
   m_ObjectHideFlags: 0
