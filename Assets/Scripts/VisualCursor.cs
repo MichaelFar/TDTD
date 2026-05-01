@@ -21,9 +21,11 @@ public class VisualCursor : MonoBehaviour
         cursorImage.enabled = true;
         // cursorImage.
         //cursorImage.color = new_image.color;
-        //cursorImage = new_image;
-        //cursorImage.color = new_image.color;
         cursorImage.sprite = new_image.sprite;
+        cursorImage.color = new_image.color;
+        //cursorImage.color = new_image.color;
+        //cursorImage.sprite = new_image.sprite;
+        //cursorImage.material;
     }
     public void HideTexture()
     {

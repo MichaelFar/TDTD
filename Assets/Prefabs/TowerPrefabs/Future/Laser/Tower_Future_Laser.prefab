@@ -337,7 +337,7 @@ MonoBehaviour:
       m_Calls: []
   target: {fileID: 0}
   objectToRotate: {fileID: 2250532973731174204}
-  sphereCastRadius: 20
+  sphereCastRadius: 30
   rotationSpeed: 20
   shouldSetTarget: 1
 --- !u!1001 &4331519578714634034

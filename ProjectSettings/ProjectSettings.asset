@@ -821,11 +821,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: TDTDtemp
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Time Keepers
+  metroCertificateIssuer: Time Keepers
+  metroCertificateNotAfter: 8003279ab5f8dd01
   metroApplicationDescription: TDTD_temp
   wsaImages: {}
   metroTileShortName: TDTD_temp

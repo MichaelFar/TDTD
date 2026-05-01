@@ -588,8 +588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -308.06, y: 86}
-  m_SizeDelta: {x: 335.5, y: 218.9}
+  m_AnchoredPosition: {x: -543, y: 967}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8146542177999106234
 CanvasRenderer:
@@ -612,15 +612,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.53333336}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 542f94799fc02d14dac4dd6ff569b31a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -700,7 +700,7 @@ MonoBehaviour:
   textLabel: {fileID: 730785739661905908}
   textLabelDefaultText: 'Demolish Mode\r\nActive: '
   activeColor: {r: 0.8522012, g: 0.72899795, b: 0.13533382, a: 1}
-  inactiveColor: {r: 0.35962257, g: 0.63522005, b: 0.22272648, a: 1}
+  inactiveColor: {r: 1, g: 1, b: 1, a: 0.53333336}
   timeToInterpolate: 1
   Changed_Active_State:
     m_PersistentCalls:
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2422380822850393715}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -1697,10 +1697,10 @@ RectTransform:
   - {fileID: 2503052787019398333}
   m_Father: {fileID: 5112830491484136515}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 185.74005, y: 182.57997}
-  m_SizeDelta: {x: 143.7, y: 116.6}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 295.74005, y: 182.57997}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &767392152241034540
 CanvasRenderer:
@@ -1723,15 +1723,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.56078434}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 404f67d5d6ee2c3429a78d5558e03c1d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1848,7 +1848,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3407376030847627333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -2523,8 +2523,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 277.9, y: -48.2}
-  m_SizeDelta: {x: 245, y: 95.79999}
+  m_AnchoredPosition: {x: 191.7, y: -97.9}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5998420282689915608
 CanvasRenderer:
@@ -2554,8 +2554,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ccee97eb6fdabf34bae987b8e6ada728, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2672,7 +2672,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5140831479507122703}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -4476,10 +4476,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8094691217159242842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 13.079956, y: -67}
-  m_SizeDelta: {x: 851.55, y: 50}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -384, y: 165}
+  m_SizeDelta: {x: 851.55005, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5431825706764661510
 CanvasRenderer:
@@ -4618,15 +4618,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_text
-      value: 'Purchase Tower: 25'
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSize
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSizeBase
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_TextWrappingMode
@@ -4669,16 +4669,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e2f460690af471e489a6a5e946bd9b23, type: 3}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.b
-      value: 0.9082413
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: labelText
+      value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: textLabel
@@ -4831,15 +4843,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_text
-      value: 'Purchase Tower: 25'
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSize
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSizeBase
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_TextWrappingMode
@@ -4882,8 +4894,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91c636b7f9987f74f8463e841cfe3e62, type: 3}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.b
-      value: 0.9732177
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.g
@@ -4891,7 +4911,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: labelText
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: textLabel
@@ -5048,15 +5072,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_text
-      value: 'Purchase Tower: 25'
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSize
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSizeBase
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_TextWrappingMode
@@ -5071,8 +5095,16 @@ PrefabInstance:
       value: GreenText
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 264dcb227676f3043a48292e92b09ea8, type: 3}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.b
-      value: 0.13110113
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.g
@@ -5080,7 +5112,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: labelText
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: textLabel
@@ -5233,15 +5269,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_text
-      value: 'Purchase Tower: 25'
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSize
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSizeBase
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_TextWrappingMode
@@ -5284,16 +5320,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
-      propertyPath: m_Color.b
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b86f5d30fe30464c9c843fac2db8cf7, type: 3}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.g
-      value: 0.7984791
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: labelText
+      value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: textLabel
@@ -5381,7 +5429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7407067343503642846, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 183.2
+      value: 178.2
       objectReference: {fileID: 0}
     - target: {fileID: 7407067343503642846, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5446,15 +5494,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_text
-      value: 'Purchase Tower: 25'
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSize
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_fontSizeBase
-      value: 36.3
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2226390483900183276, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_TextWrappingMode
@@ -5497,16 +5545,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
-      propertyPath: m_Color.b
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a5403acaf94f97e4ab6962119e2a9be7, type: 3}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.g
-      value: 0.07542368
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5707650030491338070, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
+      propertyPath: labelText
+      value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 6083000696273048201, guid: 7e29273e84c65694da65c9a353597778, type: 3}
       propertyPath: textLabel
