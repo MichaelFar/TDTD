@@ -1010,6 +1010,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
+--- !u!1001 &505461708
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.968311
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000062261397
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.05363
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4664307824632545664, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691219552767901976, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+      propertyPath: m_Name
+      value: Cursor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
 --- !u!1 &552358309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f19e76c640dd9249b1b4d90105ad468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1 &848368108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4691219552767901976, guid: 1f3efd7e88e685545850cf1bada1b285, type: 3}
+  m_PrefabInstance: {fileID: 505461708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &861666360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1570,6 +1632,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 653161805806872713, guid: b92a048a6f1a0ae4198f1041205880ee, type: 3}
+      propertyPath: playerCursor
+      value: 
+      objectReference: {fileID: 848368108}
     - target: {fileID: 4111259775443037416, guid: b92a048a6f1a0ae4198f1041205880ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -2169,6 +2235,10 @@ PrefabInstance:
       propertyPath: currentcamera
       value: 
       objectReference: {fileID: 1296842331}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: 'wavesArray.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: aa57360769ce3ff4a85b3dc7498b2f2a, type: 2}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: wavesEnded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3563,3 +3633,4 @@ SceneRoots:
   - {fileID: 57095757}
   - {fileID: 499109314}
   - {fileID: 1545722290}
+  - {fileID: 505461708}

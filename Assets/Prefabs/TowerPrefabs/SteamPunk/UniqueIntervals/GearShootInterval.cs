@@ -34,9 +34,11 @@ public class GearShootInterval : BaseTowerAction
 
             float rotation_increment = 360.0f / numProjectiles;
 
+            float additional_rotation = rotation_increment / 2.0f;
+
             for (int i = 0; i < numProjectiles; i++)
             {
-                Instantiate(projectileToShoot, transform.position, Quaternion.Euler(Vector3.up * rotation_increment * i));
+                Instantiate(projectileToShoot, transform.position, Quaternion.Euler((Vector3.up * rotation_increment * i)) * Quaternion.Euler((Vector3.up * additional_rotation)));
             }
         }
         

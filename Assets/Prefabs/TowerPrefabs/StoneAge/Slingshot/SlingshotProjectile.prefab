@@ -127,13 +127,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b149aff293e32fa45a2fd28ec675856d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 2100
-  damagePower: 2
+  speed: 2400
+  damagePower: 3
   rb: {fileID: 907192236972562634}
   target: {fileID: 0}
   timeToHome: 0.2
   pierceCount: 0
-  bounceCount: 1
+  bounceCount: 2
 --- !u!54 &907192236972562634
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
-using UnityEngine;
 using System.Collections;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
+using System.Collections.Generic;
 public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,6 +23,7 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
     {
 
         InvokeRepeating("CheckForEnemiesInShape", 0.0f, 0.1f);
+        //InvokeRepeating("CheckForEnemyLOS", 0.0f, 0.1f);
         //StartCoroutine(CheckForEnemiesInShape());
     }
 
@@ -62,15 +65,26 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
             {
                 if (is_enemy)
                 {
-                    shouldExecuteEvent = true;
-                    Now_Able_To_Execute.Invoke();
-                    print("Enemy detected");
                     enemy_instance = i.GetComponent<BaseEnemy>();
                     focusedEnemy = enemy_instance;
-                    if(shouldSetTarget)
+                    if(CheckForEnemyInLOS(focusedEnemy))
                     {
-                        target = focusedEnemy.gameObject;
+                        shouldExecuteEvent = true;
+                        Now_Able_To_Execute.Invoke();
+                        if (shouldSetTarget)
+                        {
+                            target = focusedEnemy.gameObject;
+                        }
                     }
+                    else
+                    {
+                        print("Enemy found but blocked");
+                        focusedEnemy = null;
+                        shouldExecuteEvent = false;
+                        Now_Able_To_Execute.Invoke();
+                        
+                    }
+                    
                 }
             }
             
@@ -86,6 +100,16 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
                 shouldExecuteEvent = false;
                 Now_Able_To_Execute.Invoke();
             }
+            
+            if(!CheckForEnemyInLOS(focusedEnemy))
+            {
+                
+                focusedEnemy = null;
+                target = null;
+                shouldExecuteEvent = false;
+                Now_Able_To_Execute.Invoke();
+                
+            }
         }
         else
         {
@@ -94,6 +118,59 @@ public class TowerLookAtEnemyConstantAction : BaseTowerConstantAction
             shouldExecuteEvent = false;
             Now_Able_To_Execute.Invoke();
         }
-
+        
     }
+    public bool CheckForEnemyInLOS(BaseEnemy enemy_to_check)
+    {
+        if(!enemy_to_check)
+        {
+            return false;
+        }
+        Vector3 point = enemy_to_check.gameObject.transform.position;
+        Vector3 dir = (transform.position - point).normalized * -1.0f;
+        // Ray r = new Ray(transform.position, dir);
+        Ray ray_vector = new Ray(transform.position, dir);
+
+        RaycastHit[] ray_hits = Physics.RaycastAll(ray_vector, sphereCastRadius);
+        //RaycastHit hit;
+        //bool should_ignore_wall = false;
+        List<GameObject> ordered_object_list = new List<GameObject>();// = new GameObject[ray_hits.Length];
+        foreach (RaycastHit i in ray_hits)
+        {
+            ordered_object_list.Add(i.collider.gameObject);
+            //print("Ordered list is " + ordered_object_list);
+            //print(i.collider.gameObject + " object found");
+            /*
+            if (i.collider.GetComponent<BaseEnemy>() == focusedEnemy)
+            {
+                print("Should ignore wall is true");
+                should_ignore_wall = true;
+            }
+            if (i.collider.tag == "DestroysProjectiles" && !should_ignore_wall)
+            {
+                print("Found wall that blocks vision");
+                //return false;
+            }
+            */
+        }
+        //Action action = 
+        
+        ordered_object_list = ordered_object_list.OrderBy(x => Vector3.Distance(this.transform.position, x.transform.position)).ToList();
+
+        foreach (GameObject i in ordered_object_list)
+        {
+            print(i.gameObject + " object found");
+            if(i.CompareTag("DestroysProjectiles"))
+            {
+                return false;
+            }
+            if(i.GetComponent<BaseEnemy>() == enemy_to_check)
+            {
+                return true;
+            }
+        }
+        print("Object list is " + ordered_object_list);
+        return true;
+    }
+        
 }

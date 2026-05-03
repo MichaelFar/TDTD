@@ -94,7 +94,11 @@ public class Projectile : MonoBehaviour
         }
         else if(other.tag == "DestroysProjectiles")
         {
+            
             Destroy(gameObject);
+            
+
+            
         }
     }
     

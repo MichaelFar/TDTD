@@ -23,8 +23,28 @@ public class Tower : MonoBehaviour
     //Can be set to give the interval action a target, not necessary for all interval actions
     private GameObject target;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //public bool freezeAllActions = false;
+    private bool _freezeAllActions; // field
+
+    public bool freezeAllActions   // property
+    {
+        get
+        {
+            return _freezeAllActions;
+        }  // get method
+        set
+        {
+
+            _freezeAllActions = value;
+            
+        }  // set method
+    }
+    public float freezeDuration = 2.0f;
+    private float freezeTimeTracker = 0.0f;
+    public bool shouldInitiallyFreezeActions = false;
     void Start()
     {
+        freezeAllActions = shouldInitiallyFreezeActions;
         towerIntervalActionObject = GetComponent<BaseTowerAction>();
 
         towerConstantActionObject = GetComponent<BaseTowerConstantAction>();
@@ -37,17 +57,32 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timerFloat += Time.deltaTime;
-
-        TowerConstantBehavior(Time.deltaTime);
-
-        if (timerFloat >= actionInterval && shouldContinueInterval)
+        if (!freezeAllActions)
         {
-            timerFloat = 0.0f;
-            TowerIntervalAction();
+            freezeTimeTracker = 0.0f;
+            timerFloat += Time.deltaTime;
+
+            TowerConstantBehavior(Time.deltaTime);
+
+            if (timerFloat >= actionInterval && shouldContinueInterval)
+            {
+                timerFloat = 0.0f;
+                TowerIntervalAction();
+            }
+        }
+        else
+        {
+            freezeTimeTracker += Time.deltaTime;
+            if(freezeTimeTracker >= freezeDuration)
+            {
+                freezeAllActions = false;
+            }
         }
     }
-
+    public void SetFreezeDuration(float new_duration)
+    {
+        freezeDuration = new_duration;
+    }
     private void TowerIntervalAction()
     {
         if(towerIntervalActionObject != null)

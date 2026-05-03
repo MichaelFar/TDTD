@@ -6,7 +6,10 @@ public class BillBoardUI : MonoBehaviour
     public Camera currentCamera;
     void Start()
     {
-        
+        if(currentCamera == null)
+        {
+            currentCamera = Camera.allCameras[0];
+        }
     }
 
     // Update is called once per frame
