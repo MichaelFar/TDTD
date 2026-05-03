@@ -62,8 +62,8 @@ MonoBehaviour:
   currentcamera: {fileID: 0}
   defaultSpawnInterval: 10
   wavesArray:
-  - {fileID: 11400000, guid: 4aaab22e82edef944a3eea667d8fceca, type: 2}
-  - {fileID: 11400000, guid: 0024d823849573a49a55f339e50c0186, type: 2}
+  - {fileID: 11400000, guid: 91f3aafe72ef67d43a2022ba6d6edaa6, type: 2}
+  - {fileID: 11400000, guid: 2d395236110d5fe4288f46bbc1de8aec, type: 2}
   - {fileID: 11400000, guid: 319a10a96502b974389f8f4c2877eb6e, type: 2}
   wavesEnded:
     m_PersistentCalls:
