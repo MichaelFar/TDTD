@@ -588,7 +588,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -700,7 +700,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1005,6 +1005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerSlot (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6871853453449672549, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
+      propertyPath: instanceWithDemolishObstacle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1187,7 +1191,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1519,7 +1523,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2596,7 +2600,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2709,7 +2713,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fbbfb5460ea650344b286cfc58396a8a, type: 2}
+  - {fileID: 2100000, guid: ff44e86980ee4a04facc31726d5f7a49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2878,7 +2882,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3234,7 +3238,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3739,7 +3743,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4088,7 +4092,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4130,7 +4134,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 34.5, y: -0.000009182, z: 46.1}
-  m_LocalScale: {x: 205.7674, y: 61.231, z: 20.219}
+  m_LocalScale: {x: 591.23145, y: 61.231, z: 20.219}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4273,7 +4277,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5808,7 +5812,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6105,7 +6109,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a1e61c4f4b31e641b05372c066848cf, type: 2}
+  - {fileID: 2100000, guid: 52a2b412bd2d24140baddaf831301102, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6527,6 +6531,10 @@ PrefabInstance:
     - target: {fileID: 3399385452427728368, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
       propertyPath: m_Name
       value: TowerSlot (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871853453449672549, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
+      propertyPath: instanceWithDemolishObstacle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
