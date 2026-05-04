@@ -2249,6 +2249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerSlot (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6871853453449672549, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
+      propertyPath: instanceWithDemolishObstacle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2966,7 +2970,7 @@ PrefabInstance:
       objectReference: {fileID: 1804058909}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: wavesArray.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: 'wavesArray.Array.data[0]'
@@ -2975,7 +2979,7 @@ PrefabInstance:
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: 'wavesArray.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 09f183bc80741654abe38287258134eb, type: 2}
+      objectReference: {fileID: 11400000, guid: 3f60ecbc4ea0ee4498d94eb8b6b0052f, type: 2}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: 'wavesArray.Array.data[2]'
       value: 

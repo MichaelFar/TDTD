@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: wave_3_lvl_2
   m_EditorClassIdentifier: Assembly-CSharp::Wave
   enemiesInWave:
-  - {fileID: 2107072500571646815, guid: 52a917ae86df33e46b34c54c3506885d, type: 3}
-  - {fileID: 2107072500571646815, guid: d5dbd2358b5ab6a4c97395fe566145c7, type: 3}
-  - {fileID: 2107072500571646815, guid: 9eb3c3518298d2844b781a830a67870e, type: 3}
-  - {fileID: 2107072500571646815, guid: d5dbd2358b5ab6a4c97395fe566145c7, type: 3}
-  - {fileID: 2107072500571646815, guid: d5dbd2358b5ab6a4c97395fe566145c7, type: 3}
-  - {fileID: 2107072500571646815, guid: 52a917ae86df33e46b34c54c3506885d, type: 3}
-  - {fileID: 2107072500571646815, guid: 52a917ae86df33e46b34c54c3506885d, type: 3}
-  - {fileID: 2107072500571646815, guid: 52a917ae86df33e46b34c54c3506885d, type: 3}
-  intervalForThisEnemy: []
-  defaultSpawnInterval: 1
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 2107072500571646815, guid: a27cf0d622d2ef24592f9355c7f16e6b, type: 3}
+  - {fileID: 7380366580306701986, guid: a13e7c5b99e41584b95cb8e6d40c746a, type: 3}
+  - {fileID: 7380366580306701986, guid: a13e7c5b99e41584b95cb8e6d40c746a, type: 3}
+  - {fileID: 7380366580306701986, guid: a13e7c5b99e41584b95cb8e6d40c746a, type: 3}
+  - {fileID: 7380366580306701986, guid: a13e7c5b99e41584b95cb8e6d40c746a, type: 3}
+  - {fileID: 7380366580306701986, guid: a13e7c5b99e41584b95cb8e6d40c746a, type: 3}
+  - {fileID: 7380366580306701986, guid: a13e7c5b99e41584b95cb8e6d40c746a, type: 3}
+  intervalForThisEnemy:
+  - 0
+  - 0
+  defaultSpawnInterval: 6

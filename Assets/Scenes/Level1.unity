@@ -2427,11 +2427,15 @@ PrefabInstance:
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: 'wavesArray.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4aaab22e82edef944a3eea667d8fceca, type: 2}
+      objectReference: {fileID: 11400000, guid: 72f4e536285ebdf4e921ae18d94439cf, type: 2}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: 'wavesArray.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 0024d823849573a49a55f339e50c0186, type: 2}
+      objectReference: {fileID: 11400000, guid: 17dfe8d4473a4854b818b9804ebf4b6e, type: 2}
+    - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
+      propertyPath: 'wavesArray.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b23411850c617848afdfc7d9addf3dd, type: 2}
     - target: {fileID: 2970019369400575266, guid: 9c2fcfa5573605746bedbe5dfd6c3810, type: 3}
       propertyPath: thisWaveEnded.m_PersistentCalls.m_Calls.Array.size
       value: 0
