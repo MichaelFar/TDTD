@@ -484,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerSlot (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6871853453449672549, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
+      propertyPath: instanceWithDemolishObstacle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1652,6 +1656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerSlot (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6871853453449672549, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
+      propertyPath: instanceWithDemolishObstacle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1933,6 +1941,10 @@ PrefabInstance:
     - target: {fileID: 3399385452427728368, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
       propertyPath: m_Name
       value: TowerSlot (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871853453449672549, guid: 01a1515c02e133d45b23000b81f6eff5, type: 3}
+      propertyPath: instanceWithDemolishObstacle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2575,6 +2587,14 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 90278882}
+    - target: {fileID: 7811927373735649003, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 419.91992
+      objectReference: {fileID: 0}
+    - target: {fileID: 7811927373735649003, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 89.1001
+      objectReference: {fileID: 0}
     - target: {fileID: 8094691217159242842, guid: 0feaafd4e02a06840bf71172a510b4c8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
