@@ -6689,10 +6689,6 @@ SceneRoots:
   - {fileID: 1672381850}
   - {fileID: 1490343839}
   - {fileID: 1896440615}
-<<<<<<< HEAD
-  - {fileID: 1702901203}
-=======
->>>>>>> Michael
   - {fileID: 272986275}
   - {fileID: 985818827}
   - {fileID: 417435535}
@@ -6701,8 +6697,6 @@ SceneRoots:
   - {fileID: 1134310335}
   - {fileID: 1706820267}
   - {fileID: 1842391856}
-<<<<<<< HEAD
-=======
   - {fileID: 645338440}
   - {fileID: 1030518200}
   - {fileID: 1818831765}
@@ -6710,4 +6704,3 @@ SceneRoots:
   - {fileID: 1760079095}
   - {fileID: 950873911}
   - {fileID: 1389870386}
->>>>>>> Michael
